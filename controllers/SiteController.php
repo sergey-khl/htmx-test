@@ -72,7 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('@src/views/site/test');
+        return $this->render('test');
     }
 
     public function actionUpdateText()
