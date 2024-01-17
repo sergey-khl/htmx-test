@@ -11,7 +11,8 @@ $config = [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
-        '@node_modules'   => '@vendor/node_modules',
+        '@dist'   => '@app/webpack/dist',
+        '@src'   => '@app/webpack/src',
         '@tests' => '@app/tests',
     ],
     'components' => [

@@ -18,6 +18,9 @@ Thumbs.db
 # composer itself is not needed
 composer.phar
 
+node_modules
+/webpack/dist/*
+
 # composer lock
 composer.lock
 

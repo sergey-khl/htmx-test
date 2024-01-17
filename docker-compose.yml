@@ -20,4 +20,3 @@ services:
     command: "npm run dev"
     volumes:
       - "./webpack:/webpack"
-      - "./web:/web"

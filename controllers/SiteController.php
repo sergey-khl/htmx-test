@@ -71,7 +71,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->renderFile('@app/webpack/dist/index.html');
+        return $this->render('index.html');
     }
 
     public function actionUpdateText()
