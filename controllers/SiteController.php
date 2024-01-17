@@ -17,6 +17,7 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
+        $this->layout = '@src/views/layouts/main';
         return [
             'access' => [
                 'class' => AccessControl::class,
@@ -71,7 +72,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index.html');
+        return $this->render('@src/views/site/test');
     }
 
     public function actionUpdateText()

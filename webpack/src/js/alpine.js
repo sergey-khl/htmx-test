@@ -3,5 +3,5 @@ import dropdown from './dropdown.js'
  
 Alpine.data('dropdown', dropdown)
  
-// window.Alpine = Alpine
+window.Alpine = Alpine
 Alpine.start()

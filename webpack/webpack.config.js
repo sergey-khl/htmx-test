@@ -1,4 +1,7 @@
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const glob = require('glob');
+
 
 module.exports = {
   entry: './src/js/alpine.js',
@@ -22,11 +25,15 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/views/index.html',
-    }),
-  ],
+  // plugins: [
+  //   ...glob.sync('./src/views/*.html').map((htmlFile) => {
+  //     return new HtmlWebpackPlugin({
+  //       template: htmlFile,
+  //       filename: path.basename(htmlFile),
+  //       chunks: [path.basename(htmlFile, '.html')],
+  //     });
+  //   }),
+  // ],
   devServer: {
     contentBase: './dist',
     port: 3000,
