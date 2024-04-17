@@ -17,7 +17,9 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
+        // open on http://localhost:8000
         $this->layout = '@src/views/layouts/main';
+        $this->setViewPath('@src/views/site');
         return [
             'access' => [
                 'class' => AccessControl::class,
