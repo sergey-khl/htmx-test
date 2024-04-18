@@ -1,0 +1,25 @@
+{{ use('app/assets/AppAsset') }}
+{{ register_app_asset() }}
+{{ use('app/assets/AlpineAsset') }}
+{{ register_alpine_asset() }}
+
+{{ this.beginPage() }}
+<!doctype html>
+<html lang="{{app.language}}">
+    <head>
+      <meta charset="{{app.charset}}"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">      
+      {{ html.csrfMetaTags() | raw }}
+        <title>{{ html.encode(this.title) }}</title>
+      {{ this.head() }}
+      <title><?= Html::encode($this->title) ?></title>
+        <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
+    </head>
+  <body>
+    {{ this.beginBody() }}
+      {{ content | raw }}
+    {{ this.endBody() }}
+  </body>
+</html>
+{{ this.endPage() }}

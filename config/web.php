@@ -55,6 +55,23 @@ $config = [
             'basePath' => '@app/web/assets',
             'baseUrl' => '@web/assets',
         ],
+        'view' => [
+            'renderers' => [
+                'twig' => [
+                    'class' => 'yii\twig\ViewRenderer',
+                    // set cachePath to false in order to disable template caching
+                    'cachePath' => false, //'@runtime/Twig/cache',
+                    // Array of twig options:
+                    'options' => [
+                        'auto_reload' => true,
+                    ],
+                    // add Yii helpers or widgets here
+                    'globals' => [
+                        'html' => '\yii\helpers\Html',
+                    ]
+                ]
+            ]
+        ],
     ],
     'params' => $params,
 ];

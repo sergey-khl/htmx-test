@@ -1,12 +1,4 @@
-<?php
-
-use yii\helpers\Html;
-
-$this->title = 'TEST';
-$this->params['breadcrumbs'][] = $this->title;
-?>
 <div class="site-test">
-    <h1><?= Html::encode($this->title) ?></h1>
     <div>
         <p id="dynamic-text">Original Text</p>
         <button hx-get="/site/update-text" hx-target="#dynamic-text">Update Text</button>
