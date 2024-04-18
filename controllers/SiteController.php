@@ -17,7 +17,6 @@ class SiteController extends Controller
      */
     public function behaviors()
     {
-        // open on http://localhost:8000
         $this->layout = '@src/views/layouts/main.twig';
         $this->setViewPath('@src/views/site');
         return [
@@ -74,7 +73,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('test2.twig');
+        return $this->render('test.twig');
     }
 
     public function actionUpdateText()
