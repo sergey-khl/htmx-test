@@ -23,7 +23,7 @@ You can then access the application through the following URL:
 
 ## what I added:
 
-- A webpack folder was added with my views and apline js code for reactive a frontend. Hot relead is supported (see webpack.config.js).
+- A webpack folder was added with my views and alpine js code for a reactive frontend. Hot relead is supported (see webpack.config.js).
 - Added alias for the webpack src folder. In your controller behaviours add:
 
   - ```
@@ -34,7 +34,7 @@ You can then access the application through the following URL:
     - The layout will be used as the base of our twig templates. If you omit the .twig extension a .php extension will be assumed and you can do php stuff.
     - The view path is set so when we do `return $this->render('test.twig');` we can omit the full path and just give the file name. Php files are similarly supported here. You could also omit the extension and add php render option in web.php to by default render twig.
 
-- to add htmx insert the following into the <head> of your templates
+- to add htmx insert the following into the head of your templates
   - ```
     <script src="https://unpkg.com/htmx.org@1.9.10" integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/hyperscript.org@0.9.12"></script>
